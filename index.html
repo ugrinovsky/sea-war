@@ -21,6 +21,10 @@
 				var game = new Game();
 				game.start();
 			});
+
+			$('.js-name').focus(function(){
+				$(this).val('');
+			})
 		});
 	</script>	
 </head>
@@ -28,7 +32,7 @@
 	<div class="new js-menu">
 		<div class="name">Sea Battle</div>
 		<button class="btn js-new">Новая игра</button>
-		<input type="text" class="js-name field" value="человек" autofocus>
+		<input type="text" class="js-name field" value="человек">
 	</div>
 
 	<div class="wrapper js-game hidden">

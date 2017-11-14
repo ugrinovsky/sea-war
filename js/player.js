@@ -20,7 +20,7 @@ var Player = function(_game, _type, _board, _name){
 				$(this)
 					.removeClass('ship')
 					.removeClass('busy')
-					.removeAttr('style');
+					.attr('style', '');
 			});
 		});
 		$(this.board.el).detach();
