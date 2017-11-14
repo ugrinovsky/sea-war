@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sea Battle</title>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.scss">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript" src="js/ship.js"></script>
+	<script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="js/board.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$('.js-new').click(function(){
+				$('.js-menu').addClass('hidden');
+				$('.js-game').removeClass('hidden');
+				var game = new Game();
+				game.start();
+			});
+		});
+	</script>	
+</head>
+<body>
+	<div class="new js-menu">
+		<div class="name">Sea Battle</div>
+		<button class="btn js-new">Новая игра</button>
+		<input type="text" class="js-name field" value="человек" autofocus>
+	</div>
+
+	<div class="wrapper js-game hidden">
+		<div class="js-player stat"></div>
+		<div class="board js-board1"></div>
+		<div class="board js-board2"></div>
+	</div>
+</body>
+</html>
